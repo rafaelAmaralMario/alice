@@ -1,0 +1,1 @@
+from sqlalchemy import Column, Integer, String\nfrom flask import flask\nfrom flask_sqlalchemy import SQLAlchemy\n\ndb = SQLAlchemy(flask)\n\nclass User(db.Model):\n    id = Column('user_id', Integer(), primary_key=True)\n    username = Column('username', String(256))\n    password = Column('password', String(256))
